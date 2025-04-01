@@ -4,90 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elisa Zhuang - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Elisa Zhuang</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#experience">Expériences</a></li>
-                <li><a href="#education">Diplômes</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Me contacter</a></li>
-                <li><a href="cv.pdf" target="_blank">CV</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Étudiante en 3ème année de BUT Informatique, spécialisée en développement et validation d'applications. Passionnée par l'intelligence artificielle et le développement logiciel.</p>
-        <h3>Langues</h3>
-        <p>Français (natif), Anglais (B2), Chinois (intermédiaire)</p>
-        <h3>Soft Skills</h3>
-        <p>Travail en équipe, gestion du temps, adaptabilité, résolution de problèmes</p>
-    </section>
-    
-    <section id="skills">
-        <h2>Compétences</h2>
-        <ul>
-            <li>Python, Java, PHP, JavaScript, Node.js</li>
-            <li>SQL (PL/SQL, JDBC), bases de données</li>
-            <li>Développement web (HTML, CSS, Flask, React)</li>
-            <li>Qt, PySide2, ROS2, Nav2, Carla SIMULATOR</li>
-            <li>Versionning : Git, GitHub, GitLab</li>
-        </ul>
-    </section>
-    
-    <section id="experience">
-        <h2>Expériences</h2>
-        <h3>Alternance chez Expleo (2024/2025)</h3>
-        <p>Développement d'une interface pour le Navigation Stack avec ROS2, Nav2 et Carla SIMULATOR.</p>
-        <h3>Stage en développement (2023/2024)</h3>
-        <p>Développement d'interfaces graphiques avec Qt et PySide2.</p>
-    </section>
-    
-    <section id="education">
-        <h2>Diplômes & Formations</h2>
-        <p>BUT Informatique - Université Paris Est Créteil (2022-2025)</p>
-        <p>Formation en machine learning et IA (en cours de candidature)</p>
-    </section>
-    
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="project">
-            <h3>Projet 1</h3>
-            <p>Description du projet...</p>
-            <a href="#">Voir le projet</a>
-        </div>
-        <div class="project">
-            <h3>Projet 2</h3>
-            <p>Description du projet...</p>
-            <a href="#">Voir le projet</a>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Me Contacter</h2>
-        <p>Email: <a href="mailto:eliz.sa@example.com">eliz.sa@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/eliz-sa" target="_blank">linkedin.com/in/eliz-sa</a></p>
-        <form action="send_email.php" method="post">
-            <label for="name">Nom :</label>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message :</label><br>
-            <textarea id="message" name="message" rows="5" required></textarea><br>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Elisa Zhuang</p>
-    </footer>
+  <header>
+      <h1>Elisa Zhuang</h1>
+      <nav>
+          <ul>
+              <li><a href="#about">À propos</a></li>
+              <li><a href="#skills">Compétences</a></li>
+              <li><a href="#experience">Expériences</a></li>
+              <li><a href="#education">Diplômes</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Me contacter</a></li>
+              <li><a href="cv.pdf" target="_blank">CV</a></li>
+          </ul>
+      </nav>
+  </header>
+  
+  <section id="about">
+      <div class="tab-menu">
+          <button class="tab-link active" onclick="openTab(event, 'about-me')">Présentation</button>
+          <button class="tab-link" onclick="openTab(event, 'languages')">Langues</button>
+          <button class="tab-link" onclick="openTab(event, 'soft-skills')">Soft skills</button>
+          <button class="tab-link" onclick="openTab(event, 'passions')">Passions</button>
+      </div>
+
+      <div id="about-me" class="tab-content active">
+          <p>Étudiante en 3ème année de BUT Informatique, spécialisée en développement et validation d'applications. Passionnée par l'intelligence artificielle et le développement logiciel.</p>
+      </div>
+
+      <div id="languages" class="tab-content">
+          <p>🇫🇷 Français (natif) | 🇬🇧 Anglais (B2) | 🇨🇳 Chinois (intermédiaire)</p>
+      </div>
+
+      <div id="soft-skills" class="tab-content">
+          <p>💡 Travail en équipe | ⏳ Gestion du temps | 🔄 Adaptabilité | 🔍 Résolution de problèmes</p>
+      </div>
+
+      <div id="passions" class="tab-content">
+          <p>🎻 Jouer du violon depuis 2016 | ✈️ Voyager & Découvrir de nouvelles cultures | 🍰 Passionnée par la pâtisserie</p>
+      </div>
+  </section>
+
+
+  
+  <section id="skills">
+      <h2>Compétences</h2>
+      <ul>
+          <li>Python, Java, PHP, JavaScript, Node.js</li>
+          <li>SQL (PL/SQL, JDBC), bases de données</li>
+          <li>Développement web (HTML, CSS, Flask, React)</li>
+          <li>Qt, PySide2, ROS2, Nav2, Carla SIMULATOR</li>
+          <li>Versionning : Git, GitHub, GitLab</li>
+      </ul>
+  </section>
+  
+  <section id="experience">
+      <h2>Expériences</h2>
+      <h3>Alternance chez Expleo (2024/2025)</h3>
+      <p>Développement d'une interface pour le Navigation Stack avec ROS2, Nav2 et Carla SIMULATOR.</p>
+      <h3>Stage en développement (2023/2024)</h3>
+      <p>Développement d'interfaces graphiques avec Qt et PySide2.</p>
+  </section>
+  
+  <section id="education">
+      <h2>Diplômes & Formations</h2>
+      <p>BUT Informatique - Université Paris Est Créteil UPEC (2022-2025)</p>
+      <p>Formation en machine learning et IA (en cours de candidature)</p>
+  </section>
+  
+  <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="project">
+          <h3>Projet 1</h3>
+          <p>Description du projet...</p>
+          <a href="#">Voir le projet</a>
+      </div>
+      <div class="project">
+          <h3>Projet 2</h3>
+          <p>Description du projet...</p>
+          <a href="#">Voir le projet</a>
+      </div>
+  </section>
+  
+  <section id="contact">
+      <h2>Me Contacter</h2>
+      <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:elisazhuang22@gmail.com">elisazhuang22@gmail.com</a>
+      </p>
+      <p>
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/in/eliz-sa" target="_blank">linkedin.com/in/eliz-sa</a>
+      </p>
+  </section>
+
+  
+  <footer>
+      <p>&copy; Elisa Zhuang 2025</p>
+  </footer>
+
+  <script src="./script.js"></script>
+
 </body>
 </html>
+
